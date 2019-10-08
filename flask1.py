@@ -22,6 +22,6 @@ def do_search() -> 'html':
 @app.route('/entry')
 def entry_page() -> 'html':
     return render_template('entry.html',
-                           the_title='Welcome to seelletter on web')
+                           the_title='Welcome to seekletter on web first programm I have created')
 
 app.run(debug=True)
