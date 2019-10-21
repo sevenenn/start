@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<p>You resieved:</p>
+<table>
+<tr><td>num 1:</td><td>{{ the_phrase }}</td></tr>
+<tr><td>num2:</td><td>{{ the_letters }}</td></tr>
+</table>
+
+<p>ты ввел"{{the_phrase }}" и  "{{ the_letters }}":</p>
+<h3>{{ the_results }}</h3>
+
+{% endblock %}
