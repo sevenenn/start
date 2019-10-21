@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
-from seekfunction import seekletter, calculator
+from seekfunction import seekletter
+import calculator
 
 app = Flask(__name__)
 
@@ -15,7 +16,7 @@ def do_search() -> 'html':
                            the_title=title,
                            the_results=results,)
 
-@app.route('/calc', methods=['POST'])
+@app.route('/calc')
 def do_summ() -> 'html':
     number1 = request.form['num1']
     number2 = request.form['num2']
