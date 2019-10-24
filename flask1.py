@@ -21,14 +21,18 @@ def log_request(req: 'Flask requests', res: str) -> None:
         print(req.form, req.remote_addr, req.user_agent, res, file=log, sep='|')
 
 @app.route('/viewlog')
-def view_log() -> 'str':
+def view_log() -> 'html':
     contents = []
     with open('vsearch.log') as log:
         for line in log:
             contents.append([])
             for item in line.split('|'):
                 contents[-1].append(escape(item))
-    return str(contents)
+    titles = ('Form data', 'Remote_addr', 'User_agent', 'Results')
+    return render_template('viewlog.html',
+                            the_title='View Log',
+                            the_row_titles=titles,
+                            the_data=contents,)
 
 
 @app.route('/')
