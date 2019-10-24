@@ -1,6 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, escape
 from seekfunction import seekletter
-import calculator
 
 app = Flask(__name__)
 
@@ -10,24 +9,26 @@ def do_search() -> 'html':
     letters = request.form['letters']
     title = 'Results:'
     results = str(seekletter(phrase, letters))
+    log_request(request, results)
     return render_template('results.html',
                            the_phrase=phrase,
                            the_letters=letters,
                            the_title=title,
                            the_results=results,)
 
-@app.route('/calc')
-def do_summ() -> 'html':
-    number1 = request.form['num1']
-    number2 = request.form['num2']
-    title2 = 'Ответ:'
-    results2 = str(number1 + number2)
-    return render_template('calc.html',
-                           the_num1=number1,
-                           the_num2=number2,
-                           the_title2=title2,
-                           the_results2=results2,)
+def log_request(req: 'Flask requests', res: str) -> None:
+    with open('vsearch.log', 'a') as log:
+        print(req.form, req.remote_addr, req.user_agent, res, file=log, sep='|')
 
+@app.route('/viewlog')
+def view_log() -> 'str':
+    contents = []
+    with open('vsearch.log') as log:
+        for line in log:
+            contents.append([])
+            for item in line.split('|'):
+                contents[-1].append(escape(item))
+    return str(contents)
 
 
 @app.route('/')
