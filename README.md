@@ -1,2 +1,2 @@
 # start, Flask
-Первое вэбприложение  на flask :  py,html,css
+Первое вэб приложение  на flask :  py,html,css
