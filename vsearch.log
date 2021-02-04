@@ -2,3 +2,6 @@ ImmutableMultiDict([('phrase', 'sdjghesrkgsekgrlkkoaso;ppw'), ('letters', 'aeiou
 ImmutableMultiDict([('phrase', 'zkjsdfzsd,m565'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0|set()
 ImmutableMultiDict([('phrase', 'zkjsdfzsd,m565'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0|set()
 ImmutableMultiDict([('phrase', 'mndfbzdf'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0|set()
+ImmutableMultiDict([('phrase', 'jgvjh'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0|set()
+ImmutableMultiDict([('phrase', 'jgvjh'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0|set()
+ImmutableMultiDict([('phrase', 'jgvjh'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0|set()
